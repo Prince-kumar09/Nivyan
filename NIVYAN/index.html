@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Nivyan - Daily Consistency Tracker</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =================================
+             HEADER
+        ================================== -->
+
+        <header class="header">
+
+            <div>
+
+                <p class="brand">
+                    NIVYAN
+                </p>
+
+                <h1>
+                    Daily Consistency Tracker
+                </h1>
+
+                <p class="subtitle">
+                    Build small habits. Stay consistent.
+                </p>
+
+            </div>
+
+
+            <button
+                id="themeBtn"
+                class="theme-btn"
+                type="button">
+
+                🌙
+
+            </button>
+
+        </header>
+
+
+
+        <!-- =================================
+             CURRENT USER
+        ================================== -->
+
+        <section class="profile-section">
+
+            <div class="profile-info">
+
+                <p class="small-label">
+                    CURRENT USER
+                </p>
+
+                <h2 id="currentUserName">
+                    Create Profile
+                </h2>
+
+            </div>
+
+
+            <button
+                id="switchUserBtn"
+                class="switch-user-btn"
+                type="button">
+
+                Switch User
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================
+             ADD TARGET
+        ================================== -->
+
+        <section class="add-section">
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Add today's target..."
+                    autocomplete="off"
+                >
+
+                <input
+                    type="date"
+                    id="taskDate"
+                >
+
+                <button
+                    type="submit"
+                    class="add-btn">
+
+                    Add Target
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =================================
+             TODAY'S PROGRESS
+        ================================== -->
+
+        <section class="progress-card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="small-label">
+                        TODAY
+                    </p>
+
+                    <h2 id="todayDate">
+                        Today's Progress
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="percentage"
+                    id="progressPercentage">
+
+                    0%
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill">
+                </div>
+
+            </div>
+
+
+            <p
+                id="progressText"
+                class="progress-text">
+
+                0 / 0 completed
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================
+             FILTERS
+        ================================== -->
+
+        <section class="filters">
+
+            <button
+                type="button"
+                class="filter-btn active"
+                data-filter="all">
+
+                All
+
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-filter="active">
+
+                Active
+
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-filter="completed">
+
+                Completed
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================
+             TARGETS
+        ================================== -->
+
+        <section class="tasks-section">
+
+            <div class="section-title-row">
+
+                <h2>
+                    Targets
+                </h2>
+
+
+                <span id="taskCount">
+                    0
+                </span>
+
+            </div>
+
+
+            <ul id="taskList">
+            </ul>
+
+
+            <p
+                id="emptyMessage"
+                class="empty-message">
+
+                No targets yet.
+                Start your day!
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================
+             HISTORY
+        ================================== -->
+
+        <section class="history-section">
+
+            <div class="section-title-row">
+
+                <div>
+
+                    <p class="small-label">
+                        YOUR JOURNEY
+                    </p>
+
+                    <h2>
+                        Consistency History
+                    </h2>
+
+                </div>
+
+
+                <div
+                    id="streak"
+                    class="streak">
+
+                    🔥 0 day streak
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="historyList"
+                class="history-list">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             FOOTER
+        ================================== -->
+
+        <footer>
+
+            <p>
+                Built with HTML, CSS & JavaScript
+            </p>
+
+            <p>
+                Nivyan
+            </p>
+
+        </footer>
+
+    </div>
+
+
+
+    <!-- =====================================
+         PROFILE MODAL
+    ====================================== -->
+
+    <div
+        id="profileModal"
+        class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2 id="profileModalTitle">
+                Who is using Nivyan?
+            </h2>
+
+
+            <p class="modal-subtitle">
+                Select your profile or create a new one.
+            </p>
+
+
+            <div
+                id="profileList"
+                class="profile-list">
+
+            </div>
+
+
+            <div class="add-profile-box">
+
+                <input
+                    type="text"
+                    id="newProfileInput"
+                    placeholder="Enter your name"
+                    autocomplete="off"
+                >
+
+
+                <button
+                    id="addProfileBtn"
+                    type="button">
+
+                    + Create Profile
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

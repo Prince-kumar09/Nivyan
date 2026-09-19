@@ -1,0 +1,1009 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root {
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --text: #222;
+    --muted: #777;
+    --border: #e2e5e8;
+
+    --primary: #4caf50;
+    --primary-dark: #388e3c;
+
+    --danger: #f44336;
+    --info: #2196f3;
+
+    --shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+body.dark {
+
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #f5f5f5;
+    --muted: #aaa;
+    --border: #333;
+
+    --shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    transition:
+        background 0.3s,
+        color 0.3s;
+
+    padding: 30px 15px;
+}
+
+
+/* ==========================================
+   APP
+========================================== */
+
+.app {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+}
+
+
+.brand {
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: var(--primary);
+
+    margin-bottom: 6px;
+}
+
+
+h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+.theme-btn {
+
+    border:
+        1px solid var(--border);
+
+    background: var(--card);
+
+    color: var(--text);
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   PROFILE SECTION
+========================================== */
+
+.profile-section {
+
+    background: var(--card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 16px 20px;
+
+    margin-bottom: 18px;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.profile-info h2 {
+
+    font-size: 20px;
+}
+
+
+.switch-user-btn {
+
+    padding: 9px 14px;
+
+    border:
+        1px solid var(--primary);
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.switch-user-btn:hover {
+
+    background: var(--primary);
+
+    color: white;
+}
+
+
+/* ==========================================
+   COMMON CARDS
+========================================== */
+
+.add-section,
+.progress-card,
+.tasks-section,
+.history-section {
+
+    background: var(--card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* ==========================================
+   ADD TASK
+========================================== */
+
+#taskForm {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+#taskInput {
+
+    flex: 1;
+
+    min-width: 200px;
+
+    padding: 12px;
+
+    border:
+        1px solid var(--border);
+
+    background: var(--card);
+
+    color: var(--text);
+
+    border-radius: 7px;
+
+    outline: none;
+}
+
+
+#taskDate {
+
+    padding: 12px;
+
+    border:
+        1px solid var(--border);
+
+    background: var(--card);
+
+    color: var(--text);
+
+    border-radius: 7px;
+
+    outline: none;
+}
+
+
+.add-btn {
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.add-btn:hover {
+
+    background:
+        var(--primary-dark);
+}
+
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+.section-heading,
+.section-title-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.small-label {
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 4px;
+}
+
+
+h2 {
+
+    font-size: 19px;
+}
+
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.percentage {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: var(--primary);
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: var(--border);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-top: 18px;
+}
+
+
+.progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: var(--primary);
+
+    border-radius: 10px;
+
+    transition: width 0.3s;
+}
+
+
+.progress-text {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 8px;
+}
+
+
+/* ==========================================
+   FILTERS
+========================================== */
+
+.filters {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+
+.filter-btn {
+
+    padding: 8px 14px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 6px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    cursor: pointer;
+}
+
+
+.filter-btn.active {
+
+    background: var(--primary);
+
+    color: white;
+
+    border-color:
+        var(--primary);
+}
+
+
+/* ==========================================
+   TASKS
+========================================== */
+
+#taskCount {
+
+    background: var(--border);
+
+    color: var(--text);
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+}
+
+
+#taskList {
+
+    list-style: none;
+
+    margin-top: 15px;
+}
+
+
+.task-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    margin-bottom: 9px;
+
+    background: var(--card);
+}
+
+
+.task-checkbox {
+
+    width: 18px;
+
+    height: 18px;
+
+    cursor: pointer;
+}
+
+
+.task-text {
+
+    flex: 1;
+
+    word-break: break-word;
+
+    line-height: 1.4;
+}
+
+
+.task-item.completed .task-text {
+
+    text-decoration:
+        line-through;
+
+    color: var(--muted);
+}
+
+
+.task-actions {
+
+    display: flex;
+
+    gap: 5px;
+}
+
+
+.edit-btn,
+.delete-btn {
+
+    border: none;
+
+    padding: 6px 9px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+
+.edit-btn {
+
+    background: var(--info);
+}
+
+
+.delete-btn {
+
+    background: var(--danger);
+}
+
+
+/* ==========================================
+   EMPTY MESSAGE
+========================================== */
+
+.empty-message {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    padding: 25px 10px;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   HISTORY
+========================================== */
+
+.history-list {
+
+    margin-top: 18px;
+}
+
+
+.history-card {
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    padding: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+.history-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+
+.history-date {
+
+    font-weight: bold;
+}
+
+
+.history-stats {
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.history-progress {
+
+    width: 100%;
+
+    height: 7px;
+
+    background: var(--border);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.history-progress-fill {
+
+    height: 100%;
+
+    background: var(--primary);
+
+    border-radius: 10px;
+}
+
+
+.history-status {
+
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   STREAK
+========================================== */
+
+.streak {
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    color: var(--primary);
+
+    white-space: nowrap;
+}
+
+
+.history-success {
+
+    color: var(--primary);
+
+    font-weight: bold;
+}
+
+
+.history-break {
+
+    color: var(--danger);
+
+    font-weight: bold;
+}
+
+
+.history-start {
+
+    color: var(--primary);
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    padding: 20px 0;
+}
+
+
+/* ==========================================
+   PROFILE MODAL
+========================================== */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+
+.modal-content {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+.modal-content h2 {
+
+    margin-bottom: 5px;
+}
+
+
+.modal-subtitle {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   PROFILE LIST
+========================================== */
+
+.profile-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.profile-row {
+
+    display: flex;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+.profile-btn {
+
+    flex: 1;
+
+    padding: 13px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+.profile-btn:hover {
+
+    border-color:
+        var(--primary);
+
+    background:
+        rgba(76, 175, 80, 0.08);
+}
+
+
+/* ==========================================
+   DELETE PROFILE
+========================================== */
+
+.profile-delete-btn {
+
+    width: 48px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+.profile-delete-btn:hover {
+
+    background: var(--danger);
+
+    color: white;
+
+    border-color: var(--danger);
+}
+
+
+/* ==========================================
+   ADD PROFILE
+========================================== */
+
+.add-profile-box {
+
+    border-top:
+        1px solid var(--border);
+
+    padding-top: 18px;
+}
+
+
+#newProfileInput {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    outline: none;
+
+    margin-bottom: 10px;
+}
+
+
+#addProfileBtn {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#addProfileBtn:hover {
+
+    background:
+        var(--primary-dark);
+}
+
+
+/* ==========================================
+   HIDDEN
+========================================== */
+
+.modal.hidden {
+
+    display: none;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 20px 10px;
+    }
+
+
+    h1 {
+
+        font-size: 24px;
+    }
+
+
+    .header {
+
+        align-items: center;
+    }
+
+
+    .profile-section {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .switch-user-btn {
+
+        width: 100%;
+    }
+
+
+    #taskForm {
+
+        flex-direction: column;
+    }
+
+
+    #taskInput,
+    #taskDate,
+    .add-btn {
+
+        width: 100%;
+    }
+
+
+    .task-item {
+
+        align-items: flex-start;
+    }
+
+
+    .task-actions {
+
+        flex-direction: column;
+    }
+
+
+    .section-heading,
+    .section-title-row {
+
+        align-items: flex-start;
+    }
+}
